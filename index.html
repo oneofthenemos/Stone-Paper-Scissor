@@ -5,13 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script defer async src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css" />
     <title>Stone - Paper - Scissors</title>
   </head>
   <body>
-    <button id="Stone" class="btn btn-play" onclick="start(0)">Stone</button>
-    <button id="Paper" class="btn btn-play" onclick="start(1)">Paper</button>
-    <button id="Scissor" class="btn btn-play" onclick="start(2)">
-      Scissor
-    </button>
+    <div class="container">
+      <main class="main-div">
+        <div class="selection-view">
+          <div class="sides user-side text-center">
+            <p class="choosen-text">You have chosen:</p>
+            <p id="userSelection"></p>
+          </div>
+          <div class="sides cpu-side text-center">
+            <p class="choosen-text">AI has chosen:</p>
+            <p id="cpuSelection"></p>
+          </div>
+        </div>
+        <h2 id="result-text" class="text-center"></h2>
+      </main>
+      <h4 class="h4 text-center">Select your weapon!!!</h4>
+      <div class="btn-div">
+        <button id="Stone" class="btn btn-play" onclick="start(0)">🗿</button>
+        <button id="Paper" class="btn btn-play" onclick="start(1)">🧻</button>
+        <button id="Scissor" class="btn btn-play" onclick="start(2)">✂</button>
+      </div>
+    </div>
   </body>
 </html>

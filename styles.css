@@ -1,0 +1,67 @@
+:root {
+  --blue: #42a5f5;
+  --white: #fff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+.main-div {
+  min-height: 300px;
+}
+
+.selection-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 50px;
+}
+
+.sides {
+  min-height: inherit;
+  display: inline-block;
+  flex: 1;
+}
+
+.sides > p {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 8px;
+  border: none;
+}
+
+.btn-play {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 24px;
+  padding: 12px 24px;
+}
+
+h4 {
+  font-size: 2rem;
+  margin: 0.875rem 0;
+}
+
+.text-center {
+  text-align: center;
+}

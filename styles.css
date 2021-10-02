@@ -1,0 +1,137 @@
+:root {
+  --blue: #42a5f5;
+  --white: #fff;
+  --disabledBtn: #e1f5fe;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
+.container {
+  margin: 0 10%;
+}
+
+.main-div {
+  min-height: 300px;
+}
+
+.selection-view {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin: 50px;
+}
+
+.sides {
+  min-height: inherit;
+  display: inline-block;
+  flex: 1;
+}
+
+.sides > p {
+  display: block;
+  font-size: 1.25rem;
+}
+
+.btn-div {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  padding: 8px;
+  border: none;
+}
+
+.btn-play {
+  background-color: var(--blue);
+  color: var(--white);
+  font-size: 24px;
+  padding: 12px 24px;
+}
+
+.btn-play:disabled {
+  background-color: var(--disabledBtn);
+}
+
+h4 {
+  font-size: 2rem;
+  margin: 0.875rem 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.fist {
+  font-size: 100px;
+  transform: rotate(-115deg) scaleY(-1);
+}
+
+.fist-reverse {
+  transform: rotate(-45deg);
+}
+
+.animateFistOne {
+  animation: animateFistOne 2000ms forwards;
+}
+
+.animateFistTwo {
+  animation: animateFistTwo 2000ms forwards;
+}
+
+@keyframes animateFistOne {
+  0% {
+    transform: rotate(-135deg) scaleY(-1);
+  }
+  25% {
+    transform: rotate(-115deg) scaleY(-1);
+  }
+  40% {
+    transform: rotate(-135deg) scaleY(-1);
+  }
+  65% {
+    transform: rotate(-115deg) scaleY(-1);
+  }
+  80% {
+    transform: rotate(-135deg) scaleY(-1);
+  }
+  90% {
+    transform: rotate(-115deg) scaleY(-1);
+  }
+  100% {
+    transform: rotate(-135deg) scaleY(-1);
+  }
+}
+
+@keyframes animateFistTwo {
+  0% {
+    transform: rotate(-45deg);
+  }
+  25% {
+    transform: rotate(-65deg);
+  }
+  40% {
+    transform: rotate(-45deg);
+  }
+  65% {
+    transform: rotate(-65deg);
+  }
+  80% {
+    transform: rotate(-45deg);
+  }
+  90% {
+    transform: rotate(-65deg);
+  }
+  100% {
+    transform: rotate(-45deg);
+  }
+}

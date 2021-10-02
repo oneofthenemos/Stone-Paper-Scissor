@@ -32,7 +32,17 @@ function displaySelection(userSelection, cpuSelection) {
 
   user.innerHTML = userSelection;
   cpu.innerHTML = cpuSelection;
-  setTimeout(endGameRituals, 2000);
+  setTimeout(() => {
+    changeUserHandGestures(userSelection, cpuSelection);
+    const didUserWon = chooseWinner(userSelection, cpuSelection);
+    if (didUserWon) displayWinner("You");
+    else if (didUserWon === null) displayWinner(null);
+    else displayWinner("AI");
+
+    userHand.classList.remove("animateFistOne");
+    cpuHand.classList.remove("animateFistTwo");
+    enableBtns();
+  }, 2000);
 }
 
 function chooseWinner(user, cpu) {
@@ -83,19 +93,6 @@ function changeUserHandGestures(x, y) {
       cpuHand.innerHTML = "✋";
       break;
   }
-}
-
-function endGameRituals() {
-  changeUserHandGestures(userSelection, cpuSelection);
-
-  const didUserWon = chooseWinner(userSelection, cpuSelection);
-  if (didUserWon) displayWinner("You");
-  else if (didUserWon === null) displayWinner(null);
-  else displayWinner("AI");
-
-  userHand.classList.remove("animateFistOne");
-  cpuHand.classList.remove("animateFistTwo");
-  enableBtns();
 }
 
 function disableBtns() {
